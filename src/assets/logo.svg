@@ -1,0 +1,58 @@
+<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Gradiente -->
+  <defs>
+    <linearGradient id="shieldGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C4DFF"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Escudo -->
+  <path d="M32 6
+           L48 14
+           V29
+           C48 40 41 49 32 54
+           C23 49 16 40 16 29
+           V14
+           L32 6Z"
+        fill="url(#shieldGradient)"/>
+
+  <!-- Cadeado -->
+  <rect x="26" y="25" width="12" height="10" rx="2"
+        stroke="white"
+        stroke-width="2"
+        fill="none"/>
+
+  <path d="M28 25V21
+           C28 18.5 29.8 17 32 17
+           C34.2 17 36 18.5 36 21V25"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+  <!-- Texto -->
+  <text x="65" y="31"
+        font-size="20"
+        font-family="Inter, Arial, sans-serif"
+        font-weight="700"
+        fill="#0F172A">
+        Pass
+  </text>
+
+  <text x="110" y="31"
+        font-size="20"
+        font-family="Inter, Arial, sans-serif"
+        font-weight="700"
+        fill="#6D5DFC">
+        Check
+  </text>
+
+  <text x="65" y="51"
+        font-size="11"
+        font-family="Inter, Arial, sans-serif"
+        fill="#64748B">
+        Verificador de Senha
+  </text>
+
+</svg>
