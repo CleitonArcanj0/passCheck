@@ -10,7 +10,7 @@ function App() {
     <>
       <NavBar />
 
-      <div className='grid grid-cols-1 gap-2 md:grid-cols-2 items-center mx-10 mt-4 w-full' >
+      <div className='grid grid-cols-1 gap-2 md:grid-cols-2 items-center mx-10 mt-4 ' >
         <Verificador />
         <Requisitos />
       </div>
