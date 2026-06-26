@@ -8,7 +8,6 @@ import { useState } from 'react';
 
 function App() {
   const [senha, setSenha] = useState('')
-  const [mostrar, setMostrar] = useState(false)
   const [forca, setForca] = useState(0)
 
   const inputSenha = (password) => {
