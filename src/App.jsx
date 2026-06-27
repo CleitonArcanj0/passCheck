@@ -17,6 +17,7 @@ function App() {
   }
 
   const controlarForca = (valor) => {
+    console.log(valor)
     setForca(valor)
 
   }
