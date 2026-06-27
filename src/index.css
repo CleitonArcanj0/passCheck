@@ -1,12 +1,9 @@
 @import "tailwindcss";
 
-:root {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
+
+html,body {
     background-color: #eeedf3ec;
-    height: 100vh;
+    padding: 0;
+    margin: 0;
 }

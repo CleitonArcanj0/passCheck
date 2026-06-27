@@ -11,14 +11,14 @@ function Verificador({ aoDigitarSenha, barraDeForca }) {
     return (
         <div className=" flex bg-white  shadow-sm rounded-lg  p-8 md:p-4  h-full">
 
-            <div className='space-y-2 basis-xl m-auto '>
+            <div className='m-auto space-y-2 basis-2xl'>
 
-                <h2 className="font-bold font-sans text-sm md:text-xl text-[#6249F0] ">Verificador de senha</h2>
+                <h2 className="font-bold font-sans text-sm md:text-xl lg:text-2xl text-[#6249F0] ">Verificador de senha</h2>
 
-                <div className=' relative'>
+                <div className=' relative w-full'>
                     <img src={mostrar ? eyes : eyesSlash} alt="" className='w-5 absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer' onClick={(e) => { setView() }} />
 
-                    <input type={mostrar ? "text" : "password"} placeholder='Digite sua senha' className="border border-gray-400 outline-0 p-1.5 text-xs text-gray-500 rounded-sm focus:ring-[#6249F0]  focus:ring-1 w-full placeholder:text-xs" onChange={(e) => { aoDigitarSenha(e.target.value) }} />
+                    <input type={mostrar ? "text" : "password"} placeholder='Digite sua senha' className="border border-gray-400  outline-0 p-1.5 text-xs text-gray-500 rounded-sm focus:ring-[#6249F0]  focus:ring-1 w-full h-10 placeholder:text-xs " onChange={(e) => { aoDigitarSenha(e.target.value) }} />
 
                 </div>
 

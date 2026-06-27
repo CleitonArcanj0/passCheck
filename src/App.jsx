@@ -3,6 +3,7 @@ import './App.css'
 import Verificador from './components/Verificador'
 import Requisitos from './components/Requisitos'
 import Sugestao from './components/Sugestao'
+import Footer from './components/Footer'
 import { Fragment } from 'react/jsx-runtime'
 import { useState } from 'react';
 
@@ -17,21 +18,29 @@ function App() {
 
   const controlarForca = (valor) => {
     setForca(valor)
-   
+
   }
 
   return (
     <>
-      <NavBar />
+      <div className='flex flex-col min-h-screen'>
+        <NavBar />
 
-      <div className='grid grid-cols-1 md:grid-cols-[1.6fr_1fr]  items-start gap-4 md:gap-8 mx-2 md:mx-24 mt-4'>
-        <div className='row-span-2 h-full'>
-          <Verificador aoDigitarSenha={inputSenha} barraDeForca={forca} />
+        <div className='grid grid-cols-1  md:grid-cols-[1.6fr_1fr]  items-start gap-4 md:gap-8 mx-2 md:mx-24 mt-4 mb-8'>
+
+          <div className='row-span-2 h-full'>
+            <Verificador aoDigitarSenha={inputSenha} barraDeForca={forca} />
+          </div>
+          
+          <Requisitos forcaDaSenha={controlarForca} senhaDigitada={senha} />
+          <Sugestao />
+       
         </div>
-
-        <Requisitos forcaDaSenha={controlarForca} senhaDigitada={senha} />
-        <Sugestao />
+        <div className='mt-auto'>
+            <Footer />
+        </div>
       </div>
+
     </>
 
   )
