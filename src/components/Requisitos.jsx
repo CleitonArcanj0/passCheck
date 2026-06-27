@@ -8,63 +8,57 @@ function Requisitos({ forcaDaSenha, senhaDigitada }) {
 
 
     const lista = [
-       {
-        id: 1, 
-        label: "Pelo menos 8 caracteres", 
-        teste: (e) => e.length >= 8, 
-        peso: 15
-    },
     {
-        id: 2, 
+        id: 1, 
         label: "Não pode conter espaços", 
         teste: (e) => e.match(/^\S+$/), 
         peso: 10
     },
 
     {
-        id: 3, 
+        id: 2, 
         label: "Letra maiúscula", 
         teste: (e) => e.match(/[A-Z]/g), 
-        peso: 10
+        peso: 15
     },
     {
-        id: 4, 
+        id: 3, 
         label: "Letra minúscula", 
         teste: (e) => e.match(/[a-z]/g), 
         peso: 10
     },
     {
-        id: 5, 
+        id: 4, 
         label: "Pelo menos um número", 
         teste: (e) => e.match(/[0-9]/g), 
-        peso: 10
+        peso: 15
     },
     {
-        id: 6, 
+        id: 5, 
         label: "Caractere especial", 
         teste: (e) => e.match(/[^A-Za-z0-9\s]/g),
         peso: 15
     },
     {
-        id: 7, 
+        id: 6, 
         label: "Comprimento ideal (12 ou mais caracteres)", 
         teste: (e) => e.length >= 12, 
-        peso: 10
+        peso: 15
     },
     {
-        id: 8, 
+        id: 7, 
         label: "Evitar caracteres repetidos em sequência (ex: aaa, 111)", 
         teste: (e) => !e.match(/(.)\1{2,}/g), 
         peso: 10
     },
     {
-        id: 9, 
+        id: 8, 
         label: "Evitar sequências numéricas óbvias (ex: 123, 789)", 
         teste: (e) => !e.match(/(012|123|234|345|456|567|678|789|890|987|876|765|654|543|432|321|210)/g),
         peso: 5
     },
     {
-        id: 10, 
+        id: 9, 
         label: "Evitar sequências de teclado comuns (ex: qwe, asd)", 
         teste: (e) => !e.match(/(qwe|wer|ert|rty|tyu|yui|uio|iop|asd|sdf|dfg|fgh|ghj|hjk|jkl|zxc|xcv|cvb|vbn|bnm)/gi),
         peso: 5

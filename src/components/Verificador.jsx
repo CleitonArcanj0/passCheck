@@ -11,7 +11,7 @@ function Verificador({ aoDigitarSenha, barraDeForca }) {
     return (
         <div className=" flex bg-white  shadow-sm rounded-lg  p-8 md:p-4  h-full">
 
-            <div className='m-auto space-y-2 basis-2xl'>
+            <div className='m-auto space-y-2 basis-2xl  md:basis-96 '>
 
                 <h2 className="font-bold font-sans text-sm md:text-xl lg:text-2xl text-[#6249F0] ">Verificador de senha</h2>
 
@@ -26,8 +26,14 @@ function Verificador({ aoDigitarSenha, barraDeForca }) {
                     <div className=" h-2 rounded bg-green-600 transition-all" style={{ width: `${barraDeForca}%` }}></div>
 
                 </div>
-
-                <p className='text-xs text-gray-500 '>Força da senha</p>
+                <div className='flex justify-between'>
+                    <p className='text-xs text-gray-500 '>Força da senha</p>
+                    <div className='text-xs text-gray-500 font-bold text-shadow-xs' style={{ color: `${barraDeForca <= 50 ? 'red' : barraDeForca <= 65 ? '#F9A900' : '#009C0A'}` }}>{barraDeForca <= 50 ? `Fraca` :
+                        barraDeForca <= 65 ? `Média` :
+                            barraDeForca <= 85 ? `Forte` :
+                                `Excelente`}
+                    </div>
+                </div>
 
             </div>
 
